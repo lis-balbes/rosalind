@@ -17,10 +17,16 @@ rna_codon_table = {
     "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"
 }
 
-with open('input.txt', 'r') as input:
-    rna = input.read().strip()
+def translate(rna):
+    proteins = ""
     for i in range(0, len(rna), 3):
         triplet = rna[i:i+3]
         if rna_codon_table[triplet] == "STOP":
             break
-        print(rna_codon_table[triplet], end="")
+        proteins += rna_codon_table[triplet]
+
+'''
+with open('input.txt', 'r') as input:
+    rna = input.read().strip()
+    print(translate(rna))
+'''

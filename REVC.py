@@ -1,7 +1,6 @@
 #Complementing a Strand of DNA
 
-with open('input.txt', 'r') as input:
-    dna = input.read()
+def reverseComplement(dna):
     compl = ""
     for i in dna[::-1]:
         if i == 'A':
@@ -12,4 +11,10 @@ with open('input.txt', 'r') as input:
             compl += 'G'
         elif i == 'G':
             compl += 'C'
-    print(compl)
+    return compl
+
+'''
+with open('input.txt', 'r') as input:
+    dna = input.read()
+    print(reverseComplement(dna))
+'''

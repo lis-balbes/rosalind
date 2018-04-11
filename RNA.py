@@ -1,9 +1,13 @@
-#Transcribing DNA into RNA
+# Transcribing DNA into RNA
 
+
+def transcribeDnaToRna(dna):
+    rna = dna.replace('T', 'U')
+    return rna
+
+'''
 with open('input.txt', 'r') as input:
     dna = input.read()
-    #strings are immutable in python!
-    rna = dna.replace('T', 'U')
     print(dna)
-    print(rna)
-
+    print(transcribeDnaToRna(dna))
+'''
